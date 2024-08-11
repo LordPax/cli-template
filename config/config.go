@@ -15,12 +15,11 @@ var (
 	CONFIG_DIR     = path.Join(home, ".config", "cli-template")
 	CONFIG_FILE    = path.Join(CONFIG_DIR, "config")
 	LOG_FILE       = path.Join(CONFIG_DIR, "log")
-	AVAILABLE_EXT  = []string{"jpg", "jpeg", "png", "webp"}
-	CONFIG_EXEMPLE = `# Configuration file for scan2epub`
+	CONFIG_EXEMPLE = `# Configuration file for cli-template`
 )
 
 func InitConfig() error {
-	tmpName, err := os.MkdirTemp("", "scan2epub")
+	tmpName, err := os.MkdirTemp("", "cli-template")
 	if err != nil {
 		return err
 	}
